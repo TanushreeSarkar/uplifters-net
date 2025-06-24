@@ -106,7 +106,7 @@ Here’s how you can explore Uplifters.Net:
 
 | Action | How to Do It |
 |--------|--------------|
-| 🌐 Visit Live Site | [Click Here](https://tanushreesarkar.github.io/uplifters-net/) |
+| 🌐 Visit Live Site | [Click Here](https://uplifters-net.vercel.app/) |
 | 💝 Donate | Click on “Donate Now” (currently linked to `#contact`) |
 | 🌗 Switch Theme | Click the moon/sun icon in the navbar |
 | 🖼 View Gallery | Click on any gallery image for a popup view |
@@ -141,9 +141,9 @@ We welcome community contributions! Here’s how to get started:
 
 Got questions, feedback, or want to collaborate?
 
-- 📧 Email: [contact@uplifters.net](mailto:contact@uplifters.net)  
+- 📧 Email: [contact@uplifters.net](mailto:2k22.csaiml.2212256@gmail.com)  
 - 💻 GitHub: [Tanushree Sarkar](https://github.com/TanushreeSarkar)  
-- 📲 Social: [Facebook](#) • [Instagram](#) • [YouTube](#) • [LinkedIn](#)
+- 📲 Social: [Facebook](https://www.linkedin.com/in/tanushree-sarkar-32635624b) • [Instagram](https://www.linkedin.com/in/tanushree-sarkar-32635624b) • [YouTube](#) • [LinkedIn](https://www.linkedin.com/in/tanushree-sarkar-32635624b)
 
 ---
 
