@@ -1,93 +1,157 @@
-# Uplifters.Net - Joining Hearts and Hands
+# 🌍 Uplifters.Net – *Joining Hearts and Hands*
 
-![Uplifters.Net Logo](images/logo.png#gh-light-mode-only)
-![Uplifters.Net Logo](images/logo.png#gh-dark-mode-only)
+<p align="center">
+  <img src="img/don/salary.jpg" alt="Uplifters.Net Logo" width="200">
+</p>
 
-**Uplifters.Net** is a charity platform connecting generosity with need, enabling donations for clothing, food, and education kits. Built with HTML, CSS, and JavaScript, it features a responsive design, dark/light theme toggle, interactive donation cards, and a gallery showcasing real-world impact.
+**Uplifters.Net** is a charity platform that connects *generosity with need*. It enables transparent and heartfelt donations of **clothing**, **food**, and **education kits**.  
+Developed using **HTML**, **CSS**, and **JavaScript**, the platform features a responsive layout, a light/dark theme switcher, and interactive donation tracking.
 
-![GitHub stars](https://img.shields.io/github/stars/TanushreeSarkar/uplifters-net?style=social) ![GitHub forks](https://img.shields.io/github/forks/TanushreeSarkar/uplifters-net?style=social) ![GitHub issues](https://img.shields.io/github/issues/TanushreeSarkar/uplifters-net)
-
-## 📋 Table of Contents
-- [About](#about)
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Contact](#contact)
-- [License](#license)
-
-## 🌟 About
-Uplifters.Net empowers communities by facilitating donations to support clothing, food, and education initiatives. Our mission is to transform lives through collective generosity, with a user-friendly interface and impactful visuals.
-
-![Home Section](images/home.png#gh-light-mode-only)
-![Home Section (Dark)](images/dark-theme.png#gh-dark-mode-only)
-*Homepage showcasing our mission and call-to-action buttons.*
-
-## ✨ Features
-- **Responsive Design**: Optimized for desktop and mobile devices using Bootstrap 5.
-- **Dark/Light Theme**: Toggle between themes for accessibility and comfort.
-- **Interactive Donation Cards**: Track progress for clothing, food, and education donations.
-- **Image Gallery**: Displays real-world impact with a clickable popup.
-- **Testimonial Carousel**: Highlights community feedback with smooth transitions.
-- **Impact Counters**: Animated counters for people helped, clothes donated, and more.
-
-## 📸 Screenshots
-| Home Page | Donation Section | Gallery |
-|-----------|------------------|---------|
-| ![Home](images/home.png#gh-light-mode-only) ![Home (Dark)](images/dark-theme.png#gh-dark-mode-only) | ![Donation](images/donation.png) | ![Gallery](images/gallery.png) |
-| Welcoming users with a clear mission statement. | Interactive cards with donation progress. | Showcasing impact with clickable images. |
-
-## 🛠 Installation
-To run Uplifters.Net locally:
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/TanushreeSarkar/uplifters-net.git
-   ```
-2. **Navigate to Project Folder**:
-   ```bash
-   cd uplifters-net
-   ```
-3. **Open `index.html`**:
-   - Open `index.html` in a browser (e.g., Chrome) or use a local server like Live Server in VS Code for best results.
-
-**Dependencies**:
-- No external dependencies required; all assets (Bootstrap, Font Awesome) are CDN-hosted.
-
-## 🚀 Usage
-- **Explore**: Visit `https://tanushreesarkar.github.io/uplifters-net/` to see the live site.
-- **Donate**: Click “Donate Now” buttons to contribute to causes (links to `#contact` for now).
-- **Toggle Theme**: Use the moon icon in the navbar to switch between light and dark modes.
-- **View Gallery**: Click images in the gallery section to enlarge them.
-- **Share**: Use share buttons to spread the word about Uplifters.Net.
-
-## 🤝 Contributing
-We welcome contributions! To contribute:
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature/your-feature
-   ```
-3. Commit changes:
-   ```bash
-   git commit -m "Added your feature"
-   ```
-4. Push to your fork:
-   ```bash
-   git push origin feature/your-feature
-   ```
-5. Open a pull request.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
-
-## 📬 Contact
-- **Email**: [contact@uplifters.net](mailto:contact@uplifters.net)
-- **GitHub**: [TanushreeSarkar](https://github.com/TanushreeSarkar)
-- **Social**: Follow us on [Facebook](#), [Instagram](#), [YouTube](#), [LinkedIn](#)
-
-## 📜 License
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+<p align="center">
+  <img src="https://img.shields.io/github/stars/TanushreeSarkar/uplifters-net?style=social">
+  <img src="https://img.shields.io/github/forks/TanushreeSarkar/uplifters-net?style=social">
+  <img src="https://img.shields.io/github/issues/TanushreeSarkar/uplifters-net">
+</p>
 
 ---
 
-*Built with ❤️ by [Tanushree Sarkar](https://github.com/TanushreeSarkar)*
+## 📋 Table of Contents
+- [🌟 About](#-about)
+- [✨ Features](#-features)
+- [📸 Screenshots](#-screenshots)
+- [🛠 Installation](#-installation)
+- [🚀 Usage](#-usage)
+- [🤝 Contributing](#-contributing)
+- [📬 Contact](#-contact)
+- [📜 License](#-license)
+
+---
+
+## 🌟 About
+
+**Uplifters.Net** empowers communities by bridging those who care with those in need.  
+Whether you want to donate warm clothes, provide meals, or sponsor education kits—this platform makes it simple, beautiful, and effective.
+
+<p align="center">
+  <img src="img/light_home" alt="Homepage Light Mode" width="600"><br>
+  <img src="img/dark_home" alt="Homepage Dark Mode" width="600">
+</p>
+
+> *Homepage featuring our mission and call-to-action buttons.*
+
+---
+
+## ✨ Features
+
+- ✅ **Responsive Design**  
+  Built with Bootstrap 5 to ensure mobile, tablet, and desktop compatibility.
+
+- 🌗 **Dark/Light Theme Toggle**  
+  Switch seamlessly between themes using the navbar icon.
+
+- 📦 **Interactive Donation Cards**  
+  Real-time progress tracking for food, clothing, and education categories.
+
+- 🖼️ **Image Gallery with Popups**  
+  Browse donation impact through an engaging lightbox popup experience.
+
+- 💬 **Testimonial Carousel**  
+  Displays rotating feedback from those helped, powered by Swiper.js.
+
+- 📊 **Animated Impact Counters**  
+  Live-updating numbers show people helped, resources donated, and community growth.
+
+---
+
+## 📸 Screenshots
+
+| 🏠 Home Page | 🎁 Donation Section | 📷 Gallery & Testimonials |
+|-------------|----------------------|----------------------------|
+| <img src="img/dark_home" width="250"> | <img src="img/feature_dark" width="250"> | <img src="img/swiper" width="250"> |
+| Welcoming layout with mission and action. | Trackable donation categories. | Gallery with carousel and testimonial stories. |
+
+---
+
+## 🛠 Installation
+
+Want to run it locally? Super easy! 👇
+
+### 1. Clone the Repository:
+```bash
+git clone https://github.com/TanushreeSarkar/uplifters-net.git
+```
+
+### 2. Navigate to the Project Folder:
+```bash
+cd uplifters-net
+```
+
+### 3. Open in Your Browser:
+You can simply open `index.html` in your favorite browser:
+
+- Option 1: Double-click `index.html`  
+- Option 2: Use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in VS Code for a smooth development experience
+
+### 🔗 No External Dependencies!
+All resources are loaded via CDN:
+- **Bootstrap 5**
+- **Font Awesome**
+- **Google Fonts**
+
+---
+
+## 🚀 Usage
+
+Here’s how you can explore Uplifters.Net:
+
+| Action | How to Do It |
+|--------|--------------|
+| 🌐 Visit Live Site | [Click Here](https://tanushreesarkar.github.io/uplifters-net/) |
+| 💝 Donate | Click on “Donate Now” (currently linked to `#contact`) |
+| 🌗 Switch Theme | Click the moon/sun icon in the navbar |
+| 🖼 View Gallery | Click on any gallery image for a popup view |
+| 🔗 Share | Use social media buttons to spread the word |
+
+---
+
+## 🤝 Contributing
+
+We welcome community contributions! Here’s how to get started:
+
+1. **Fork** this repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Commit** your changes:
+   ```bash
+   git commit -m "Added: your feature"
+   ```
+4. **Push** to your fork:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Open a **Pull Request**.
+
+📄 See [CONTRIBUTING.md](CONTRIBUTING.md) for more contribution guidelines.
+
+---
+
+## 📬 Contact
+
+Got questions, feedback, or want to collaborate?
+
+- 📧 Email: [contact@uplifters.net](mailto:contact@uplifters.net)  
+- 💻 GitHub: [Tanushree Sarkar](https://github.com/TanushreeSarkar)  
+- 📲 Social: [Facebook](#) • [Instagram](#) • [YouTube](#) • [LinkedIn](#)
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.  
+Please see [LICENSE](LICENSE) for usage rights.
+
+---
+
+> Made with ❤️ and empathy by [Tanushree Sarkar](https://github.com/TanushreeSarkar)
