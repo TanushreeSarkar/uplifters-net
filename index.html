@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="shortcut icon" href="img/don/salary.jpg" type="image/x-icon">
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
 </head>
-<body>
+<body data-api-base="http://localhost:5000/api">
     <div class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </div>
@@ -17,7 +21,7 @@
         <header>
             <div class="container">
                 <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="#home">
+                    <a class="navbar-brand" href="index.html#home">
                         <img src="img/don/salary.jpg" alt="Uplifters.Net Logo" width="30" class="mr-2">
                         Uplifters.Net
                         <small class="d-block tagline">Joining Hearts and Hands</small>
@@ -28,24 +32,33 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#home">Home</a>
+                                <a class="nav-link active" href="index.html#home">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#donation">Donate</a>
+                                <a class="nav-link" href="index.html#donation">Donate</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#mission-id">Impact</a>
+                                <a class="nav-link" href="index.html#mission-id">Impact</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#about">About</a>
+                                <a class="nav-link" href="about.html">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#contact">Contact</a>
+                                <a class="nav-link" href="contact.html">Contact</a>
                             </li>
                             <li class="nav-item">
                                 <button id="theme-toggle" class="btn btn-sm btn-outline-light ms-2" aria-label="Toggle theme">
                                     <i class="fas fa-moon"></i>
                                 </button>
+                            </li>
+                            <li class="nav-item" id="authNavItem">
+                                <button class="btn btn-sm btn-outline-primary ms-3" data-bs-toggle="modal" data-bs-target="#authModal">
+                                    Login / Register
+                                </button>
+                            </li>
+                            <li class="nav-item d-none align-items-center gap-2" id="userNavItem">
+                                <span class="nav-link mb-0">Hi, <span id="userName">Friend</span></span>
+                                <button class="btn btn-sm btn-danger" id="logoutBtn" type="button">Logout</button>
                             </li>
                         </ul>
                     </div>
@@ -72,35 +85,98 @@
         </div>
     </div>
 
+    <!-- Hero Banner Section -->
+    <section class="hero-banner" id="hero">
+        <div class="hero-content">
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-6">
+                        <div class="hero-text">
+                            <span class="hero-badge">Making a Difference</span>
+                            <h1 class="hero-title">Transform Lives Through <span class="gradient-text">Generosity</span></h1>
+                            <p class="hero-description">Join thousands of compassionate individuals who are creating lasting change in communities worldwide. Every donation, no matter how small, makes a significant impact.</p>
+                            <div class="hero-stats">
+                                <div class="stat-item">
+                                    <h3 class="stat-number" data-target="12500">1000+</h3>
+                                    <p class="stat-label">Lives Changed</p>
+                                </div>
+                                <div class="stat-item">
+                                    <h3 class="stat-number" data-target="8500">50+</h3>
+                                    <p class="stat-label">Donations Made</p>
+                                </div>
+                                <div class="stat-item">
+                                    <h3 class="stat-number" data-target="3200">20+</h3>
+                                    <p class="stat-label">Communities Served</p>
+                                </div>
+                            </div>
+                            <div class="hero-buttons">
+                                <button type="button" class="btn1 btn-hero" data-bs-toggle="modal" data-bs-target="#donationModal">
+                                    <i class="fas fa-heart"></i> Start Donating
+                                </button>
+                                <a href="#mission-id" class="btn2 btn-hero">
+                                    <i class="fas fa-play-circle"></i> Watch Our Story
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-visual">
+                            <div class="floating-card card-1">
+                                <i class="fas fa-hands-helping"></i>
+                                <p>Community Support</p>
+                            </div>
+                            <div class="floating-card card-2">
+                                <i class="fas fa-heart"></i>
+                                <p>Love & Care</p>
+                            </div>
+                            <div class="floating-card card-3">
+                                <i class="fas fa-seedling"></i>
+                                <p>Growing Impact</p>
+                            </div>
+                            <div class="hero-image-wrapper">
+                                <img src="img/img-1.png" alt="Uplifters.Net Impact" class="hero-main-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="currentColor"/>
+            </svg>
+        </div>
+    </section>
+
     <!-- Impact Counter Section -->
-    <section class="impact-counter py-5">
+    <section class="impact-counter py-5" id="mission-id">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-3 mb-4">
                     <div class="counter-box p-4">
                         <i class="fas fa-users fa-2x mb-3"></i>
-                        <h3 class="counter" data-target="12500">0</h3>
+                        <h3 class="counter" data-metric="people_helped" data-target="12500">0</h3>
                         <p>People Helped</p>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="counter-box p-4">
                         <i class="fas fa-tshirt fa-2x mb-3"></i>
-                        <h3 class="counter" data-target="8500">0</h3>
+                        <h3 class="counter" data-metric="clothes_donated" data-target="8500">0</h3>
                         <p>Clothes Donated</p>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="counter-box p-4">
                         <i class="fas fa-utensils fa-2x mb-3"></i>
-                        <h3 class="counter" data-target="3200">0</h3>
+                        <h3 class="counter" data-metric="meals_provided" data-target="3200">0</h3>
                         <p>Meals Provided</p>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="counter-box p-4">
                         <i class="fas fa-book fa-2x mb-3"></i>
-                        <h3 class="counter" data-target="1500">0</h3>
+                        <h3 class="counter" data-metric="education_kits" data-target="1500">0</h3>
                         <p>Education Kits</p>
                     </div>
                 </div>
@@ -123,7 +199,7 @@
                         <h2>We <span>Uplifters.Net</span> connect generosity with need</h2>
                         <p>Make a difference today: donate to Uplifters.Net and help transform lives.</p>
                         <div class="buttons">
-                            <a href="#donation" class="btn1">Donate Now</a>
+                            <button type="button" class="btn1" data-bs-toggle="modal" data-bs-target="#donationModal">Donate Now</button>
                             <a href="#mission-id" class="btn2">See Our Impact</a>
                         </div>
                     </div>
@@ -290,6 +366,60 @@
                 </div>
             </div>
             <div class="testimonials-nav" id="testimonials-nav"></div>
+            <div class="text-center mt-4">
+                <button class="btn2" data-bs-toggle="modal" data-bs-target="#testimonialModal">Share your story</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-sec py-5" id="contact">
+        <div class="container">
+            <div class="heading text-center">
+                <h2>Contact & Partner With Us</h2>
+                <p>Share your ideas, ask for support, or partner on an initiative.</p>
+            </div>
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6">
+                    <div class="contact-card h-100 p-4">
+                        <h4>Send a Message</h4>
+                        <form id="contact-form" class="mt-3">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="contact-name" class="form-label">Full Name</label>
+                                    <input type="text" id="contact-name" name="name" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="contact-email" class="form-label">Email</label>
+                                    <input type="email" id="contact-email" name="email" class="form-control" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="contact-subject" class="form-label">Subject</label>
+                                    <input type="text" id="contact-subject" name="subject" class="form-control" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="contact-message" class="form-label">Message</label>
+                                    <textarea id="contact-message" name="message" class="form-control" rows="4" required></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn1 mt-3 w-100">Send Message</button>
+                            <p class="form-status mt-2" id="contact-status"></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-card h-100 p-4">
+                        <h4>Community Hotline</h4>
+                        <p class="mb-1"><i class="fas fa-phone-volume me-2 text-primary"></i>+92 300 591 2345</p>
+                        <p class="mb-1"><i class="fas fa-envelope me-2 text-primary"></i>support@uplifters.net</p>
+                        <p><i class="fas fa-map-marker-alt me-2 text-primary"></i>123 Charity Lane, Hope City</p>
+                        <hr>
+                        <h5>Need help faster?</h5>
+                        <p>Login to your dashboard to track donations, submit testimonials, and upload gallery stories directly.</p>
+                        <button class="btn2 mt-2" data-bs-toggle="modal" data-bs-target="#authModal">Access Dashboard</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -349,6 +479,153 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Auth Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="authModalLabel">Join Uplifters.Net</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-pills mb-3" id="authTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="login-tab" data-bs-toggle="pill" data-bs-target="#login-pane" type="button" role="tab">Login</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="register-tab" data-bs-toggle="pill" data-bs-target="#register-pane" type="button" role="tab">Register</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="login-pane" role="tabpanel">
+                            <form id="login-form">
+                                <div class="mb-3">
+                                    <label for="login-email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="login-email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="login-password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="login-password" required>
+                                </div>
+                                <button type="submit" class="btn1 w-100">Login</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="register-pane" role="tabpanel">
+                            <form id="register-form">
+                                <div class="row g-2">
+                                    <div class="col-md-6">
+                                        <label for="register-first-name" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="register-first-name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="register-last-name" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="register-last-name" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3 mt-2">
+                                    <label for="register-email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="register-email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="register-password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="register-password" required minlength="6">
+                                </div>
+                                <button type="submit" class="btn1 w-100">Create Account</button>
+                            </form>
+                        </div>
+                    </div>
+                    <p class="form-status mt-3" id="auth-status"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Donation Modal -->
+    <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="donationModalLabel">Make a Donation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="donation-form">
+                        <div class="mb-3">
+                            <label for="donation-name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="donation-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="donation-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="donation-email" required>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col-md-6">
+                                <label for="donation-amount" class="form-label">Amount (USD)</label>
+                                <input type="number" class="form-control" id="donation-amount" min="1" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="donation-method" class="form-label">Method</label>
+                                <select id="donation-method" class="form-select">
+                                    <option value="card">Credit / Debit Card</option>
+                                    <option value="bank_transfer">Bank Transfer</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3 mt-2">
+                            <label for="donation-campaign" class="form-label">Campaign</label>
+                            <select id="donation-campaign" class="form-select">
+                                <option value="">General Fund</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="donation-message" class="form-label">Leave a Note (optional)</label>
+                            <textarea id="donation-message" class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn1 w-100">Submit Donation</button>
+                        <p class="form-status mt-2" id="donation-status"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial Modal -->
+    <div class="modal fade" id="testimonialModal" tabindex="-1" aria-labelledby="testimonialModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="testimonialModalLabel">Share Your Story</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="testimonial-form">
+                        <div class="mb-3">
+                            <label for="testimonial-name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="testimonial-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="testimonial-content" class="form-label">Testimonial</label>
+                            <textarea id="testimonial-content" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="testimonial-rating" class="form-label">Impact Rating</label>
+                            <select id="testimonial-rating" class="form-select" required>
+                                <option value="5">5 - Life-changing</option>
+                                <option value="4">4 - Very Helpful</option>
+                                <option value="3">3 - Helpful</option>
+                                <option value="2">2 - Somewhat Helpful</option>
+                                <option value="1">1 - Needs Improvement</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn1 w-100">Submit Testimonial</button>
+                        <p class="form-status mt-2" id="testimonial-status"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/animations.js"></script>
     <script src="js/script.js"></script>
     <script>
         const backToTop = document.getElementById('backToTop');

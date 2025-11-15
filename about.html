@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Uplifters.Net</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="shortcut icon" href="img/don/salary.jpg" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body data-api-base="http://localhost:5000/api">
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <div class="fixed-top">
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/don/salary.jpg" alt="Uplifters.Net Logo" width="30" class="mr-2">
+                        Uplifters.Net
+                        <small class="d-block tagline">Joining Hearts and Hands</small>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#donation">Donate</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#mission-id">Impact</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item">
+                                <button id="theme-toggle" class="btn btn-sm btn-outline-light ms-2">
+                                    <i class="fas fa-moon"></i>
+                                </button>
+                            </li>
+                            <li class="nav-item" id="authNavItem">
+                                <button class="btn btn-sm btn-outline-primary ms-3" data-bs-toggle="modal" data-bs-target="#authModal">
+                                    Login / Register
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <!-- About Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="row align-items-center min-vh-50 py-5">
+                <div class="col-lg-12 text-center">
+                    <h1 class="page-title">About Uplifters.Net</h1>
+                    <p class="page-subtitle">Connecting Hearts, Transforming Lives</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Our Mission</h2>
+                    <p class="section-text">At Uplifters.Net, we believe that every act of kindness creates a ripple effect of positive change. Our mission is to bridge the gap between those who want to help and those who need support, creating a community where generosity knows no bounds.</p>
+                    <p class="section-text">We focus on three core areas: providing clothing for warmth and dignity, ensuring food security for families, and supporting education through essential learning materials.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="img/img-2.jpeg" alt="Our Mission" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Our Core Values</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="value-card text-center p-4">
+                        <i class="fas fa-heart fa-3x mb-3 text-primary"></i>
+                        <h4>Compassion</h4>
+                        <p>We approach every interaction with empathy and understanding, recognizing the dignity of every individual we serve.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card text-center p-4">
+                        <i class="fas fa-shield-alt fa-3x mb-3 text-primary"></i>
+                        <h4>Transparency</h4>
+                        <p>We maintain complete transparency in our operations, ensuring donors know exactly how their contributions make a difference.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card text-center p-4">
+                        <i class="fas fa-handshake fa-3x mb-3 text-primary"></i>
+                        <h4>Community</h4>
+                        <p>We believe in the power of community, bringing people together to create lasting positive change.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Our Impact</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="impact-card p-4">
+                        <h3><i class="fas fa-users text-primary"></i> Community Reach</h3>
+                        <p>We've connected with over 12,500 individuals across multiple communities, providing essential support and resources.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="impact-card p-4">
+                        <h3><i class="fas fa-chart-line text-primary"></i> Growing Impact</h3>
+                        <p>Our programs have distributed over 8,500 clothing items, 3,200 meals, and 1,500 education kits to those in need.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Join Us in Making a Difference</h2>
+            <p class="lead mb-4">Your support can transform lives. Every donation, no matter how small, creates lasting change.</p>
+            <a href="index.html#donation" class="btn btn-light btn-lg">Start Donating Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>We are dedicated to making a difference through community support and impactful initiatives.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.html#donation">Donate</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Charity Lane, Hope City</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+92 300 591 2345</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@uplifters.net</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Uplifters.Net. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Page-specific animations
+        gsap.from('.page-title', { opacity: 0, y: 50, duration: 1, ease: 'power3.out' });
+        gsap.from('.page-subtitle', { opacity: 0, y: 30, duration: 0.8, delay: 0.2, ease: 'power2.out' });
+        gsap.utils.toArray('.value-card, .impact-card').forEach((card, index) => {
+            gsap.from(card, {
+                scrollTrigger: { trigger: card, start: 'top 85%' },
+                opacity: 0, y: 50, duration: 0.8, delay: index * 0.1, ease: 'power2.out'
+            });
+        });
+    </script>
+</body>
+</html>
+
