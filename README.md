@@ -20,6 +20,7 @@ Developed using **HTML**, **CSS**, and **JavaScript**, the platform features a r
 - [✨ Features](#-features)
 - [📸 Screenshots](#-screenshots)
 - [🛠 Installation](#-installation)
+- [🧠 Backend API](#-backend-api)
 - [🚀 Usage](#-usage)
 - [🤝 Contributing](#-contributing)
 - [📬 Contact](#-contact)
@@ -86,7 +87,15 @@ git clone https://github.com/TanushreeSarkar/uplifters-net.git
 cd uplifters-net
 ```
 
-### 3. Open in Your Browser:
+### 3. Backend Setup (New!)
+```bash
+cd backend
+npm install
+cp .env.example .env   # fill in MongoDB Atlas, Cloudinary, Brevo, etc.
+npm run dev
+```
+
+### 4. Open in Your Browser:
 You can simply open `index.html` in your favorite browser:
 
 - Option 1: Double-click `index.html`  
@@ -99,6 +108,19 @@ All resources are loaded via CDN:
 - **Google Fonts**
 
 ---
+
+## 🧠 Backend API
+
+- **Tech**: Node.js + Express, MongoDB Atlas, Cloudinary, Brevo email, Render/Railway hosting ready.
+- **Features**: JWT auth, profile management, donation tracking, campaign CMS, testimonials + gallery moderation, contact inbox, admin dashboard metrics.
+- **Structure**:
+  - `backend/src/models` – Users, Donations, Campaigns, Impact metrics, Testimonials, Gallery, Contacts, Notifications.
+  - `backend/src/controllers` – Auth, User, Donation, Campaign, Metric, Testimonial, Gallery, Contact, Admin.
+  - `backend/src/routes` – `/api/auth`, `/api/users`, `/api/donations`, `/api/campaigns`, `/api/metrics`, `/api/testimonials`, `/api/gallery`, `/api/contact`, `/api/admin`.
+  - `backend/src/services` – Token generation, Brevo email, dynamic metrics aggregation.
+  - `backend/src/middleware` – Auth guard, role checks, validators, rate limiting, centralized error handling, Cloudinary uploads.
+- **Environment**: configure `MONGODB_URI`, `JWT_SECRET`, `CLOUDINARY_*`, `BREVO_*`, `FRONTEND_URL`, `ADMIN_DEFAULT_*`, etc. using `backend/.env.example`.
+- **Run**: `npm run dev` for local development, `npm start` for production (after building environment).
 
 ## 🚀 Usage
 
