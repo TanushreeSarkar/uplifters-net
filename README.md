@@ -1,179 +1,383 @@
-# 🌍 Uplifters.Net – *Joining Hearts and Hands*
+# 🌍 Uplifters.Net – Joining Hearts & Hands with Technology
 
-<p align="center">
-  <img src="img/don/salary.jpg" alt="Uplifters.Net Logo" width="200">
-</p>
+<div align="center">
+  <img src="img/don/salary.jpg" alt="Uplifters.Net Logo" width="150"><br><br>
 
-**Uplifters.Net** is a charity platform that connects *generosity with need*. It enables transparent and heartfelt donations of **clothing**, **food**, and **education kits**.  
-Developed using **HTML**, **CSS**, and **JavaScript**, the platform features a responsive layout, a light/dark theme switcher, and interactive donation tracking.
+  **A full-stack charity platform connecting acts of kindness to real human needs.**  
+  
+  Built with ❤️ using HTML, CSS, JavaScript, Node.js, Express, MongoDB, Cloudinary, and Gmail SMTP.  
+  Deployed on **Render** (Backend) & **Vercel** (Frontend).
 
-<p align="center">
-  <img src="https://img.shields.io/github/stars/TanushreeSarkar/uplifters-net?style=social">
-  <img src="https://img.shields.io/github/forks/TanushreeSarkar/uplifters-net?style=social">
-  <img src="https://img.shields.io/github/issues/TanushreeSarkar/uplifters-net">
-</p>
-
----
-
-## 📋 Table of Contents
-- [🌟 About](#-about)
-- [✨ Features](#-features)
-- [📸 Screenshots](#-screenshots)
-- [🛠 Installation](#-installation)
-- [🧠 Backend API](#-backend-api)
-- [🚀 Usage](#-usage)
-- [🤝 Contributing](#-contributing)
-- [📬 Contact](#-contact)
-- [📜 License](#-license)
+  <br><br>
+  
+  ![GitHub stars](https://img.shields.io/github/stars/TanushreeSarkar/uplifters-net?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/TanushreeSarkar/uplifters-net?style=social)
+  ![GitHub issues](https://img.shields.io/github/issues/TanushreeSarkar/uplifters-net)
+  ![Status](https://img.shields.io/badge/Status-Live-brightgreen?style=flat-square)
+</div>
 
 ---
 
-## 🌟 About
+## ✨ Key Features
 
-**Uplifters.Net** empowers communities by bridging those who care with those in need.  
-Whether you want to donate warm clothes, provide meals, or sponsor education kits—this platform makes it simple, beautiful, and effective.
-
-<p align="center">
-  <img src="img/light_home" alt="Homepage Light Mode" width="600"><br>
-  <img src="img/dark_home" alt="Homepage Dark Mode" width="600">
-</p>
-
-> *Homepage featuring our mission and call-to-action buttons.*
-
----
-
-## ✨ Features
-
-- ✅ **Responsive Design**  
-  Built with Bootstrap 5 to ensure mobile, tablet, and desktop compatibility.
-
-- 🌗 **Dark/Light Theme Toggle**  
-  Switch seamlessly between themes using the navbar icon.
-
-- 📦 **Interactive Donation Cards**  
-  Real-time progress tracking for food, clothing, and education categories.
-
-- 🖼️ **Image Gallery with Popups**  
-  Browse donation impact through an engaging lightbox popup experience.
-
-- 💬 **Testimonial Carousel**  
-  Displays rotating feedback from those helped, powered by Swiper.js.
-
-- 📊 **Animated Impact Counters**  
-  Live-updating numbers show people helped, resources donated, and community growth.
+- 🎨 **Modern & Responsive Design** – Beautiful UI that works seamlessly across all devices
+- 🌗 **Light/Dark Mode** – Toggle between themes for comfortable viewing
+- 🔥 **Full-Stack Integration** – Complete frontend and backend with cloud services
+- ☁️ **Cloud Storage** – Cloudinary-powered image gallery and uploads
+- 📊 **Dynamic Metrics Dashboard** – Real-time donation impact tracking
+- ✉️ **Smart Contact System** – Gmail SMTP integration with automated responses
+- 🔒 **Secure Authentication** – JWT-based auth with role management (Admin/User)
+- 🎯 **Campaign Management** – Track and display active donation campaigns
+- ⭐ **User Testimonials** – Community feedback with admin moderation
 
 ---
 
-## 📸 Screenshots
+## 🖼️ Preview
 
-| 🏠 Home Page | 🎁 Donation Section | 📷 Gallery & Testimonials |
-|-------------|----------------------|----------------------------|
-| <img src="img/dark_home" width="250"> | <img src="img/feature_dark" width="250"> | <img src="img/swiper" width="250"> |
-| Welcoming layout with mission and action. | Trackable donation categories. | Gallery with carousel and testimonial stories. |
+<div align="center">
+  <img src="img/light_home" alt="Homepage Preview" width="700"><br>
+  <em>Clean, intuitive, and emotionally engaging interface</em>
+</div>
 
 ---
 
-## 🛠 Installation
+## 🛠️ Tech Stack
 
-Want to run it locally? Super easy! 👇
+| Layer       | Technologies |
+|-------------|--------------|
+| **Frontend**    | HTML5, CSS3, JavaScript, Bootstrap, Swiper.js, Lightbox |
+| **Backend**     | Node.js, Express.js, Mongoose, JWT, Multer, Nodemailer |
+| **Database**    | MongoDB Atlas |
+| **Storage**     | Cloudinary |
+| **Email**       | Gmail SMTP (App Password) |
+| **Deployment**  | Render (Backend), Vercel (Frontend) |
 
-### 1. Clone the Repository:
-```bash
-git clone https://github.com/TanushreeSarkar/uplifters-net.git
+---
+
+## 📁 Project Structure
+
+```
+uplifters-net/
+│
+├── frontend/
+│   ├── index.html
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── main.js
+│   └── img/
+│       └── don/
+│
+├── backend/
+│   ├── src/
+│   │   ├── app.js
+│   │   ├── server.js
+│   │   ├── routes/
+│   │   │   ├── auth.js
+│   │   │   ├── gallery.js
+│   │   │   ├── contact.js
+│   │   │   ├── testimonials.js
+│   │   │   └── metrics.js
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   ├── middleware/
+│   │   │   └── auth.js
+│   │   ├── services/
+│   │   └── utils/
+│   ├── .env.example
+│   ├── package.json
+│   └── package-lock.json
 ```
 
-### 2. Navigate to the Project Folder:
+---
+
+## 🔧 Core Backend Modules
+
+### 🔐 Authentication Module
+- JWT access and refresh token system
+- Secure password hashing with bcrypt
+- Token rotation and expiry management
+- Role-based access control (Admin/User)
+
+### 🖼️ Gallery Module
+- Image upload via Multer middleware
+- Cloud storage integration with Cloudinary
+- Admin moderation and approval system
+- Public gallery API for frontend display
+
+### 💬 Contact Module
+- Form submissions stored in MongoDB
+- Automated email notifications via Gmail SMTP
+- Input validation and sanitization
+- Admin dashboard for message management
+
+### ⭐ Testimonials Module
+- User-submitted feedback collection
+- Admin approval workflow
+- Frontend carousel integration with Swiper.js
+- Rating and comment system
+
+### 📊 Metrics & Analytics
+- Real-time donation impact statistics
+- Daily auto-updated counters
+- Campaign performance tracking
+- Public API for frontend display
+
+### 📁 Campaign Management
+- Create and manage donation campaigns
+- Category-based organization
+- Active/inactive status tracking
+- API endpoints for campaign data
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- MongoDB Atlas account
+- Cloudinary account
+- Gmail account with App Password
+
+### Installation
+
+**1. Clone the Repository**
+
 ```bash
+git clone https://github.com/TanushreeSarkar/uplifters-net.git
 cd uplifters-net
 ```
 
-### 3. Backend Setup (New!)
+**2. Backend Setup**
+
 ```bash
 cd backend
 npm install
-cp .env.example .env   # fill in MongoDB Atlas, Cloudinary, Brevo, etc.
+cp .env.example .env
+```
+
+**3. Configure Environment Variables**
+
+Edit the `.env` file with your credentials:
+
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+JWT_REFRESH_SECRET=your_refresh_secret
+CLOUDINARY_CLOUD_NAME=your_cloudinary_name
+CLOUDINARY_API_KEY=your_cloudinary_key
+CLOUDINARY_API_SECRET=your_cloudinary_secret
+EMAIL_USER=your_gmail@gmail.com
+EMAIL_PASS=your_gmail_app_password
+FRONTEND_URL=http://localhost:3000
+```
+
+**4. Start Development Server**
+
+```bash
 npm run dev
 ```
 
-### 4. Open in Your Browser:
-You can simply open `index.html` in your favorite browser:
+Backend runs on `http://localhost:5000`
 
-- Option 1: Double-click `index.html`  
-- Option 2: Use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in VS Code for a smooth development experience
+**5. Frontend Setup**
 
-### 🔗 No External Dependencies!
-All resources are loaded via CDN:
-- **Bootstrap 5**
-- **Font Awesome**
-- **Google Fonts**
+Simply open `frontend/index.html` in a browser or use a live server:
+
+```bash
+cd frontend
+npx live-server
+```
 
 ---
 
-## 🧠 Backend API
+## 🌐 Deployment
 
-- **Tech**: Node.js + Express, MongoDB Atlas, Cloudinary, Brevo email, Render/Railway hosting ready.
-- **Features**: JWT auth, profile management, donation tracking, campaign CMS, testimonials + gallery moderation, contact inbox, admin dashboard metrics.
-- **Structure**:
-  - `backend/src/models` – Users, Donations, Campaigns, Impact metrics, Testimonials, Gallery, Contacts, Notifications.
-  - `backend/src/controllers` – Auth, User, Donation, Campaign, Metric, Testimonial, Gallery, Contact, Admin.
-  - `backend/src/routes` – `/api/auth`, `/api/users`, `/api/donations`, `/api/campaigns`, `/api/metrics`, `/api/testimonials`, `/api/gallery`, `/api/contact`, `/api/admin`.
-  - `backend/src/services` – Token generation, Brevo email, dynamic metrics aggregation.
-  - `backend/src/middleware` – Auth guard, role checks, validators, rate limiting, centralized error handling, Cloudinary uploads.
-- **Environment**: configure `MONGODB_URI`, `JWT_SECRET`, `CLOUDINARY_*`, `BREVO_*`, `FRONTEND_URL`, `ADMIN_DEFAULT_*`, etc. using `backend/.env.example`.
-- **Run**: `npm run dev` for local development, `npm start` for production (after building environment).
+### Backend Deployment on Render
 
-## 🚀 Usage
+1. Create a new Web Service on [Render](https://render.com)
+2. Connect your GitHub repository
+3. Configure build settings:
+   - **Build Command:** `npm install`
+   - **Start Command:** `npm start`
+4. Add environment variables from `.env`
+5. Deploy and note your backend URL
+6. Test health endpoint: `https://your-app.onrender.com/health`
 
-Here’s how you can explore Uplifters.Net:
+### Frontend Deployment on Vercel
 
-| Action | How to Do It |
-|--------|--------------|
-| 🌐 Visit Live Site | [Click Here](https://uplifters-net.vercel.app/) |
-| 💝 Donate | Click on “Donate Now” (currently linked to `#contact`) |
-| 🌗 Switch Theme | Click the moon/sun icon in the navbar |
-| 🖼 View Gallery | Click on any gallery image for a popup view |
-| 🔗 Share | Use social media buttons to spread the word |
+1. Import project on [Vercel](https://vercel.com)
+2. Update API base URL in `frontend/index.html`:
+
+```html
+<body data-api-base="https://your-backend.onrender.com/api">
+```
+
+3. Deploy and your site is live!
+
+---
+
+## 🌍 API Endpoints
+
+### Authentication
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| POST | `/api/auth/register` | Register new user | No |
+| POST | `/api/auth/login` | Login and get JWT | No |
+| POST | `/api/auth/refresh` | Refresh access token | Yes |
+| POST | `/api/auth/logout` | Logout user | Yes |
+
+### Gallery
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| GET | `/api/gallery` | Fetch all gallery items | No |
+| POST | `/api/gallery` | Upload image | Admin |
+| DELETE | `/api/gallery/:id` | Delete image | Admin |
+
+### Contact
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| POST | `/api/contact` | Submit contact form | No |
+| GET | `/api/contact` | Get all messages | Admin |
+
+### Testimonials
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| GET | `/api/testimonials` | Get approved testimonials | No |
+| POST | `/api/testimonials` | Submit testimonial | Yes |
+| PATCH | `/api/testimonials/:id` | Approve testimonial | Admin |
+
+### Metrics
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| GET | `/api/metrics` | Get platform metrics | No |
+| PUT | `/api/metrics` | Update metrics | Admin |
+
+### Campaigns
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| GET | `/api/campaigns` | Get all campaigns | No |
+| POST | `/api/campaigns` | Create campaign | Admin |
+| PATCH | `/api/campaigns/:id` | Update campaign | Admin |
+
+**Testing:** Use [Postman](https://www.postman.com/) or [Thunder Client](https://www.thunderclient.com/) for API testing.
+
+---
+
+## 🧪 Testing
+
+```bash
+# Run tests
+npm test
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run linter
+npm run lint
+```
 
 ---
 
 ## 🤝 Contributing
 
-We welcome community contributions! Here’s how to get started:
+We love contributions! Here's how you can help:
 
-1. **Fork** this repository.
-2. Create a new branch:
+1. **Fork the repository**
+2. **Create a feature branch**
    ```bash
-   git checkout -b feature/your-feature-name
+   git checkout -b feature/amazing-feature
    ```
-3. **Commit** your changes:
+3. **Commit your changes**
    ```bash
-   git commit -m "Added: your feature"
+   git commit -m "Add amazing feature"
    ```
-4. **Push** to your fork:
+4. **Push to the branch**
    ```bash
-   git push origin feature/your-feature-name
+   git push origin feature/amazing-feature
    ```
-5. Open a **Pull Request**.
+5. **Open a Pull Request**
 
-📄 See [CONTRIBUTING.md](CONTRIBUTING.md) for more contribution guidelines.
+### Contribution Guidelines
+
+- Write clean, readable code
+- Follow existing code style
+- Add comments for complex logic
+- Test your changes thoroughly
+- Update documentation as needed
 
 ---
 
-## 📬 Contact
+## 🐛 Known Issues
 
-Got questions, feedback, or want to collaborate?
-
-- 📧 Email: [contact@uplifters.net](mailto:2k22.csaiml.2212256@gmail.com)  
-- 💻 GitHub: [Tanushree Sarkar](https://github.com/TanushreeSarkar)  
-- 📲 Social: [Facebook](https://www.linkedin.com/in/tanushree-sarkar-32635624b) • [Instagram](https://www.linkedin.com/in/tanushree-sarkar-32635624b) • [YouTube](#) • [LinkedIn](https://www.linkedin.com/in/tanushree-sarkar-32635624b)
+- Gallery images may load slowly on first visit (caching improves subsequent loads)
+- Email notifications may be delayed during high traffic
 
 ---
 
-## 📜 License
+## 📝 Future Enhancements
 
-This project is licensed under the **MIT License**.  
-Please see [LICENSE](LICENSE) for usage rights.
+- [ ] Payment gateway integration (Razorpay/Stripe)
+- [ ] Multi-language support
+- [ ] Mobile app (React Native)
+- [ ] Advanced analytics dashboard
+- [ ] SMS notifications
+- [ ] Social media integration
+- [ ] Volunteer management system
 
 ---
 
-> Made with ❤️ and empathy by [Tanushree Sarkar](https://github.com/TanushreeSarkar)
+## 👨‍💻 Developer
+
+**Tanushree Sarkar**  
+Full-Stack Developer & Creator of Uplifters.Net
+
+📧 Email: [2k22.csaiml.2212256@gmail.com](mailto:2k22.csaiml.2212256@gmail.com)  
+🔗 GitHub: [@TanushreeSarkar](https://github.com/TanushreeSarkar)  
+🔗 LinkedIn: [Tanushree Sarkar](https://www.linkedin.com/in/tanushree-sarkar-32635624b)
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+
+Free to use for personal and commercial projects.
+
+---
+
+## 🙏 Acknowledgments
+
+- Bootstrap for responsive design components
+- Cloudinary for seamless image management
+- MongoDB Atlas for reliable database hosting
+- Render & Vercel for deployment infrastructure
+- All contributors and supporters of this project
+
+---
+
+## 💖 Final Thoughts
+
+> **"Technology becomes truly powerful when it uplifts humanity."**
+
+This platform was built with empathy, purpose, and passion to create real positive impact in the world.
+
+Every donation, every testimonial, and every connection made through this platform represents hope and humanity coming together.
+
+**Thank you for being part of this journey.** 🌟
+
+---
+
+<div align="center">
+  Made with ❤️ by <a href="https://github.com/TanushreeSarkar">Tanushree Sarkar</a>
+  <br><br>
+  ⭐ Star this repo if you found it helpful!
+</div>
